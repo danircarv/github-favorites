@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Github Favorites</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <img src="./assets/Gitfav.svg" alt="Logo do Gitfav" />
+        <div>
+          <input
+            type="text"
+            placeholder="Digite o Github username do usuario que deseja favoritar"
+          />
+          <button>&#9734; FAVORITAR</button>
+        </div>
+      </header>
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Repositories</th>
+            <th>Followers</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="user">
+              <img
+                src="https://github.com/danircarv.png"
+                alt="Imagem de danircarv"
+              />
+              <a href="https://github.com/danircarv" target="_blank">
+                <p>Daniel Rodrigues</p>
+                <span>danircarv</span>
+              </a>
+            </td>
+            <td class="repositories">1</td>
+            <td class="Followers">100000</td>
+            <td><button>&times;</button></td>
+          </tr>
+
+          <tr>
+            <td class="user">
+              <img
+                src="https://github.com/JoaoVlopess.png"
+                alt="Imagem de JoaoVlopess"
+              />
+              <a href="https://github.com/JoaoVlopess" target="_blank">
+                <p>João Lopes</p>
+                <span>JoaoVlopess</span>
+              </a>
+            </td>
+            <td class="repositories">1</td>
+            <td class="Followers">100000</td>
+            <td><button>&times;</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
