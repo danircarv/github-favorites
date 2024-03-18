@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-primary: "Roboto", sans-serif;
+  --text-color: #e1e1e6;
+  --table-head-color: #092d38;
+  --button-color: #065e7c;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #000000;
+  color: var(--text-color);
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+button {
+  background-color: var(--button-color);
+}
+
+#app {
+  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8.7rem auto;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.search input {
+  background-color: #06181c;
+  color: #7c7c8a;
+  height: 4.8rem;
+  border: 1px solid #06181c;
+  border-radius: 0.5rem;
+  padding: 0 0.8rem;
+  width: 46.2rem;
+  font-size: 1.6rem;
+}
+
+.search button {
+  background-color: var(--button-color);
+  border-radius: 0.5rem;
+  height: 4.8rem;
+  border: none;
+  padding: 1.2rem 3.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.search button span {
+  font-size: 1.8rem;
+}
+
+.search button:hover {
+  filter: brightness(1.1);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 1rem 2rem -1rem rgba(241, 236, 236, 0.3);
+}
+
+table * {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+table th {
+  background-color: var(--table-head-color);
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 1.6rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 0.4rem;
+}
+
+table tr:nth-child(odd) {
+  background-color: #041116;
+}
+
+table tr:nth-child(even) {
+  background-color: #06181c;
+}
+table td {
+  padding: 1.6rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+td.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  background: none;
+  border: none;
+
+  color: #f75a68;
+  font-weight: bold;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+td .remove:hover {
+  opacity: 1;
+}
