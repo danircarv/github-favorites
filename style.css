@@ -150,4 +150,5 @@ td .remove {
 
 td .remove:hover {
   opacity: 1;
+  cursor: pointer;
 }
