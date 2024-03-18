@@ -7,26 +7,12 @@ export class Favorites {
   }
 
   load() {
-    this.entries = [
-      {
-        login: "danircarv",
-        name: "Daniel Rodrigues",
-        public_repos: "76",
-        followers: "120200",
-      },
-      {
-        login: "diego3g",
-        name: "Diego Fernandes",
-        public_repos: "76",
-        followers: "120000",
-      },
-      {
-        login: "andrebrito16",
-        name: "André Brito",
-        public_repos: "76",
-        followers: "120000",
-      },
-    ];
+    const entries =
+      JSON.parse(localStorage.getItem("@github-favorites:")) || [];
+
+    console.log(entries);
+
+    this.entries = [];
   }
 
   delete(user) {
