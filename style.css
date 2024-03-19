@@ -89,6 +89,10 @@ table * {
   color: var(--text-color);
 }
 
+tbody {
+  background-image: url(./assets/Estrela.svg);
+}
+
 table th {
   background-color: var(--table-head-color);
   text-align: left;

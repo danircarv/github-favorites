@@ -21,12 +21,27 @@ export class Favorites {
   }
 
   load() {
-    const entries =
-      JSON.parse(localStorage.getItem("@github-favorites:")) || [];
+    this.entries = JSON.parse(localStorage.getItem("@github-favorites:")) || [];
+  }
 
-    console.log(entries);
+  save() {
+    localStorage.setItem("@github-favorites:", JSON.stringify(this.entries));
+  }
 
-    this.entries = [];
+  async add(username) {
+    try {
+      const user = await GithubUser.search(username);
+
+      if (user.login === undefined) {
+        throw new Error("Usuário não encontrado!");
+      }
+
+      this.entries = [user, ...this.entries];
+      this.update();
+      this.save();
+    } catch (error) {
+      alert(error.message);
+    }
   }
 
   delete(user) {
@@ -37,6 +52,7 @@ export class Favorites {
 
     this.entries = filteredEntries;
     this.update();
+    this.save();
   }
 }
 
@@ -48,6 +64,16 @@ export class FavoritesView extends Favorites {
     this.tbody = this.root.querySelector("table tbody");
 
     this.update();
+    this.onFavorite();
+  }
+
+  onFavorite() {
+    const favoriteButton = this.root.querySelector(".favorite");
+    favoriteButton.onclick = () => {
+      const { value } = this.root.querySelector(".search input");
+
+      this.add(value);
+    };
   }
 
   update() {
